@@ -18,17 +18,18 @@ namespace LedControl
         private TcpClient client = new TcpClient();
         private int rVal, gVal, bVal;
         private byte[] arr = new byte[16];
+        private string ip = "192.168.1.74";
         private NetworkStream stream;
-        private String message;
+        //private String message;
         public Form1()
         {
             InitializeComponent();
             rVal = bVal = gVal = 0;
-            textBox1.Text = rVal.ToString();
-            textBox2.Text = gVal.ToString();
-            textBox3.Text = bVal.ToString();
+            redBox.Text = rVal.ToString();
+            greenBox.Text = gVal.ToString();
+            blueBox.Text = bVal.ToString();
             if (tcpConnect()==0)
-                textBox4.Text = "Connected!";
+                statusBox.Text = "Connected!";
         }
 
         private int tcpConnect()
@@ -37,13 +38,13 @@ namespace LedControl
             try
             {
 
-                client.Connect("192.168.1.74", 7);
+                client.Connect(ip, 7);
                 stream = client.GetStream();
 
             }
             catch(Exception e)
             {
-                textBox4.Text = "Connection failed";
+                statusBox.Text = "Connection failed";
                 return 1;
             }
             return 0;
@@ -52,62 +53,41 @@ namespace LedControl
         private void button1_Click(object sender, EventArgs e)
         {
             //Reset Control
-            bVal = Blue.Value;
-            message = "S0";
-            //arr = System.Text.Encoding.ASCII.GetBytes(message);
+            bVal = BlueBar.Value;
             arr[0] = (byte)'S';
             arr[1] = 0;
             stream.Write(arr, 0, 2);
-            message = "";
         }
 
         private void Red_Scroll(object sender, ScrollEventArgs e)
         {
             //Red Control
-            rVal = Red.Value;
-            textBox1.Text = rVal.ToString();
-            //message="R"+ rVal.ToString();
-            //arr = System.Text.Encoding.ASCII.GetBytes(message);
+            rVal = RedBar.Value;
+            redBox.Text = rVal.ToString();
             arr[0] = (byte)'R';
             arr[1] = (byte)rVal;
             stream.Write(arr, 0, 2);
-            //message = "";
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Green_Scroll(object sender, ScrollEventArgs e)
         {
             //Green Control
-            gVal = Green.Value;
-            textBox2.Text = gVal.ToString();
-            //message = "G" + gVal.ToString();
-            //arr = System.Text.Encoding.ASCII.GetBytes(message);
+            gVal = GreenBar.Value;
+            greenBox.Text = gVal.ToString();
             arr[0] = (byte)'G';
             arr[1] = (byte)gVal;
             stream.Write(arr, 0, 2);
-            //message = "";
         }
 
         private void Blue_Scroll(object sender, ScrollEventArgs e)
         {
             //Blue Control
-            bVal = Blue.Value;
-            textBox3.Text = bVal.ToString();
-            //message = "B" + bVal.ToString();
-            //arr = System.Text.Encoding.ASCII.GetBytes(message);
+            bVal = BlueBar.Value;
+            blueBox.Text = bVal.ToString();
             arr[0] = (byte)'B';
             arr[1] = (byte)bVal;
             stream.Write(arr, 0, arr.Length);
-            //message = "";
         }
     }
 }

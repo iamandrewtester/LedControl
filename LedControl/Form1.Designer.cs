@@ -28,126 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.Red = new System.Windows.Forms.HScrollBar();
-            this.Green = new System.Windows.Forms.HScrollBar();
-            this.Blue = new System.Windows.Forms.HScrollBar();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.resetButton = new System.Windows.Forms.Button();
+            this.RedBar = new System.Windows.Forms.HScrollBar();
+            this.GreenBar = new System.Windows.Forms.HScrollBar();
+            this.BlueBar = new System.Windows.Forms.HScrollBar();
+            this.redBox = new System.Windows.Forms.TextBox();
+            this.greenBox = new System.Windows.Forms.TextBox();
+            this.blueBox = new System.Windows.Forms.TextBox();
+            this.statusBox = new System.Windows.Forms.TextBox();
+            this.redLabel = new System.Windows.Forms.Label();
+            this.greenLabel = new System.Windows.Forms.Label();
+            this.blueLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // resetButton
             // 
-            this.button1.Location = new System.Drawing.Point(29, 32);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Reset";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.resetButton.Location = new System.Drawing.Point(29, 32);
+            this.resetButton.Name = "resetButton";
+            this.resetButton.Size = new System.Drawing.Size(75, 23);
+            this.resetButton.TabIndex = 0;
+            this.resetButton.Text = "Reset";
+            this.resetButton.UseVisualStyleBackColor = true;
+            this.resetButton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Red
+            // RedBar
             // 
-            this.Red.Location = new System.Drawing.Point(29, 76);
-            this.Red.Name = "Red";
-            this.Red.Size = new System.Drawing.Size(182, 24);
-            this.Red.TabIndex = 1;
-            this.Red.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Red_Scroll);
+            this.RedBar.Location = new System.Drawing.Point(29, 76);
+            this.RedBar.Name = "RedBar";
+            this.RedBar.Size = new System.Drawing.Size(182, 24);
+            this.RedBar.TabIndex = 1;
+            this.RedBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Red_Scroll);
             // 
-            // Green
+            // GreenBar
             // 
-            this.Green.Location = new System.Drawing.Point(29, 120);
-            this.Green.Name = "Green";
-            this.Green.Size = new System.Drawing.Size(182, 27);
-            this.Green.TabIndex = 1;
-            this.Green.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Green_Scroll);
+            this.GreenBar.Location = new System.Drawing.Point(29, 120);
+            this.GreenBar.Name = "GreenBar";
+            this.GreenBar.Size = new System.Drawing.Size(182, 27);
+            this.GreenBar.TabIndex = 1;
+            this.GreenBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Green_Scroll);
             // 
-            // Blue
+            // BlueBar
             // 
-            this.Blue.Location = new System.Drawing.Point(29, 172);
-            this.Blue.Name = "Blue";
-            this.Blue.Size = new System.Drawing.Size(182, 24);
-            this.Blue.TabIndex = 1;
-            this.Blue.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Blue_Scroll);
+            this.BlueBar.Location = new System.Drawing.Point(29, 172);
+            this.BlueBar.Name = "BlueBar";
+            this.BlueBar.Size = new System.Drawing.Size(182, 24);
+            this.BlueBar.TabIndex = 1;
+            this.BlueBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.Blue_Scroll);
             // 
-            // textBox1
+            // redBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(228, 76);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.redBox.Location = new System.Drawing.Point(228, 76);
+            this.redBox.Name = "redBox";
+            this.redBox.Size = new System.Drawing.Size(100, 20);
+            this.redBox.TabIndex = 2;
             // 
-            // textBox2
+            // greenBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(228, 120);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.greenBox.Location = new System.Drawing.Point(228, 120);
+            this.greenBox.Name = "greenBox";
+            this.greenBox.Size = new System.Drawing.Size(100, 20);
+            this.greenBox.TabIndex = 3;
             // 
-            // textBox3
+            // blueBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(228, 172);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 4;
+            this.blueBox.Location = new System.Drawing.Point(228, 172);
+            this.blueBox.Name = "blueBox";
+            this.blueBox.Size = new System.Drawing.Size(100, 20);
+            this.blueBox.TabIndex = 4;
             // 
-            // textBox4
+            // statusBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(29, 230);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 4;
-            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.statusBox.Location = new System.Drawing.Point(29, 230);
+            this.statusBox.Name = "statusBox";
+            this.statusBox.Size = new System.Drawing.Size(182, 20);
+            this.statusBox.TabIndex = 4;
             // 
-            // label1
+            // redLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 62);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Red";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.redLabel.AutoSize = true;
+            this.redLabel.Location = new System.Drawing.Point(39, 62);
+            this.redLabel.Name = "redLabel";
+            this.redLabel.Size = new System.Drawing.Size(27, 13);
+            this.redLabel.TabIndex = 5;
+            this.redLabel.Text = "Red";
             // 
-            // label2
+            // greenLabel
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(42, 104);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 13);
-            this.label2.TabIndex = 6;
-            this.label2.Text = "Green";
+            this.greenLabel.AutoSize = true;
+            this.greenLabel.Location = new System.Drawing.Point(42, 104);
+            this.greenLabel.Name = "greenLabel";
+            this.greenLabel.Size = new System.Drawing.Size(36, 13);
+            this.greenLabel.TabIndex = 6;
+            this.greenLabel.Text = "Green";
             // 
-            // label3
+            // blueLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(42, 151);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(28, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Blue";
+            this.blueLabel.AutoSize = true;
+            this.blueLabel.Location = new System.Drawing.Point(42, 151);
+            this.blueLabel.Name = "blueLabel";
+            this.blueLabel.Size = new System.Drawing.Size(28, 13);
+            this.blueLabel.TabIndex = 7;
+            this.blueLabel.Text = "Blue";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(363, 262);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Blue);
-            this.Controls.Add(this.Green);
-            this.Controls.Add(this.Red);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.blueLabel);
+            this.Controls.Add(this.greenLabel);
+            this.Controls.Add(this.redLabel);
+            this.Controls.Add(this.statusBox);
+            this.Controls.Add(this.blueBox);
+            this.Controls.Add(this.greenBox);
+            this.Controls.Add(this.redBox);
+            this.Controls.Add(this.BlueBar);
+            this.Controls.Add(this.GreenBar);
+            this.Controls.Add(this.RedBar);
+            this.Controls.Add(this.resetButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -157,17 +155,17 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.HScrollBar Red;
-        private System.Windows.Forms.HScrollBar Green;
-        private System.Windows.Forms.HScrollBar Blue;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button resetButton;
+        private System.Windows.Forms.HScrollBar RedBar;
+        private System.Windows.Forms.HScrollBar GreenBar;
+        private System.Windows.Forms.HScrollBar BlueBar;
+        private System.Windows.Forms.TextBox redBox;
+        private System.Windows.Forms.TextBox greenBox;
+        private System.Windows.Forms.TextBox blueBox;
+        private System.Windows.Forms.TextBox statusBox;
+        private System.Windows.Forms.Label redLabel;
+        private System.Windows.Forms.Label greenLabel;
+        private System.Windows.Forms.Label blueLabel;
     }
 }
 
